@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/editarVentas/ventas.css">
+    <title>Document</title>
+</head>
+<body>
+     {{> verticalNavbar}}
+     <div class="datatable-container">
+         <div class="header-tools">
+             <div class="tools">
+                 <ul>
+                     <li>
+                         <button class="btn-abrir-popup" id="btn-abrir-popup">
+                             <ion-icon name="add-circle-outline"></ion-icon>
+                         </button>
+                     </li>
+                     
+                     <li>
+                         <button>
+                             <ion-icon name="share-social-outline"></ion-icon>
+                         </button>
+                     </li>
+                 </ul>
+             </div>
+             <div class="search">
+                <div class="input-search">
+                    <ion-icon name="search-outline"></ion-icon>
+                    <input type="text" name="" id="" class="search-input">
+                </div>
+             </div>
+         </div>
+         <table class="datatable">
+             <thead>
+                 <tr>
+                    <th>Nº de tickets</th>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Formas de pago</th>
+                    <th>New Buyer</th>
+                    <th>Status</th>
+                    <th></th>
+                    <th></th>
+                 </tr>
+             </thead>
+             <tbody>
+                {{#each Venta}}
+                <tr>
+                    <td>{{NumberTicket}}</td>
+                    <td>{{Product}}</td>
+                    <td>{{Price}}$</td>
+                    <td>{{PaymentType}}</td>
+                    <td>{{NewBuyer}}</td>
+                    <td>{{Status}}</td>
+                    <td>
+                        <a href="/EditarVenta/{{_id}}">
+                            <button>
+                                <ion-icon name="pencil-outline"></ion-icon>
+                            </button> 
+                        </a>
+                     </td>
+                     <td>
+                         <form action="/EliminarVenta/{{_id}}?_method=DELETE" method="POST">
+                            <input type="hidden" name="_method" id="DELETE">
+                            <button>
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </button>
+                         </form>
+                     </td>
+                </tr>
+                {{/each}}
+             </tbody>
+
+         </table>
+
+        <div class="overlay" id="overlay">
+            <div class="popup" id="popup">
+                <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><ion-icon name="close-outline"></ion-icon></a>
+                <h3>Añadir una nueva Venta</h3>
+                <form action="/AnadirVenta" method="POST">
+                    <div class="contenedor-inputs">
+                        <input type="text" name="NumberTicket" id="" placeholder="Nº de ticket" />
+                        <input type="text" name="Product" id="" placeholder="Producto" />
+                        <input type="text" name="Price" id="" placeholder="Precio" />
+                        <input type="text" name="PaymentType" id="" placeholder="Forma de pago" />
+                    </div>
+                    <div>
+                        <input type="submit" name="" id="" value="Crear" class="btn-submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="overlay2" id="overlay2">
+            <div class="popup2" id="popup2">
+                <a href="/Ventas" id="btn-cerrar-popup2" class="btn-cerrar-popup2"><ion-icon name="close-outline"></ion-icon></a>
+                <h3>Editar un Venta</h3>
+                <form action="/VentaEditado/{{EditarVenta._id}}?_method=PUT" method="POST">
+                    <input type="hidden" name="_method" id="PUT">
+                    <div class="contenedor-inputs2">
+                        <input type="text" name="NumberTicket" id="" placeholder="numero de Ticket" value="{{EditarVenta.NumberTicket}}" />
+                        <input type="text" name="Product" id="" placeholder="Producto"  value="{{EditarVenta.Product}}"/>
+                        <input type="text" name="Price" id="" placeholder="Precio"  value="{{EditarVenta.Price}}"/>
+                        <input type="text" name="PaymentType" id="" placeholder="Forma de pago"  value="{{EditarVenta.PaymentType}}"/>
+                        <input type="text" name="Customertype" id="" placeholder="Tipo de compra" value="{{EditarVenta.Customertype}}"/>
+                        <input type="text" name="NewBuyer" id="" placeholder="Precio"  value="{{EditarVenta.NewBuyer}}"/>
+                        <input type="text" name="Status" id="" placeholder="Status"  value="{{EditarVenta.Status}}"/>
+                    </div>
+                    <div>
+                        <input type="submit" name="" id="" value="Editar" class="btn-submit2">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<!--
+         <div class="footer-tools">
+             <div class="list-items">
+                Show
+                <select name="n-entries" id="n-enties" class="n-entries">
+                    <option value="15">5</option>
+                    <option value="10" selected>10</option>
+                    <option value="15"></option>
+                </select>
+                entries
+             </div>
+             <div class="pages">
+                 <ul>
+                    <li><span class="active">1</span></li>
+                    <li><button>2</button></li>
+                    <li><button>3</button></li>
+                    <li><button>4</button></li>
+                    <li><button>...</button></li>
+                    <li><button>9</button></li>
+                    <li><button>10</button></li>
+                 </ul>
+             </div>
+         </div>
+-->
+</body>
+
+<script src="/javascripts/ventas.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

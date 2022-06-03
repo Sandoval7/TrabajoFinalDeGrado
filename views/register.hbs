@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In</title>
+  <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+</head>
+
+<body>
+  <section id="bodySignin">
+    {{#if Messageregister}}
+      <div class="error">{{Messageregister}}</div>
+    {{/if}}
+    <div class="login-container">
+      <div class="login-info-container">
+        <h1 class="title">Register </h1>
+        <form action="/AnadirUsuario" method="POST" class="inputs-container">
+        <input type="text" name="nombre" class="input" placeholder="name" required>
+            <input type="email" name="correo" class="input" placeholder="email" required>
+            <input type="password" name="password" class="input" placeholder="password" required>
+            <button>
+                <span class="shadow"></span>
+                <span class="edge"></span>
+                <span class="front text"> Create Account
+                </span>
+            </button>
+            <span class="span">You have an account? <a href="/Sing-in" id="#link">Login</a></span>
+            <a href="/" class="icono"><ion-icon name="arrow-back-circle-outline"></ion-icon></a>
+        </form>
+      </div>
+      <div class="image-container">
+        <img src="/img/logo_transparent.png" alt="" />
+      </div>
+    </div>
+  </section>
+  <link rel="stylesheet" href="stylesheets/register/estilos.css">
+</html>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

@@ -1,0 +1,356 @@
+$primary-color: white
+$secondary-color: rgb(61, 68, 73)
+$highlight-color: #3282b8
+
+$dt-status-available-color: greenyellow
+$dt-status-away-color: lightsalmon
+$dt-status-offline-color: lightgray
+
+$dt-padding: 12px
+$dt-padding-s: 6px
+$dt-padding-xs: 2px
+
+$dt-border-radius: 3px
+
+$dt-background-color-container: #2a3338
+$dt-border-color: $secondary-color
+$dt-bg-color: $highlight-color
+$dt-text-color: $primary-color
+$dt-bg-active-button: $highlight-color
+$dt-text-color-button: $primary-color
+$dt-text-color-active-button: $primary-color
+$dt-hover-cell-color: $highlight-color
+$dt-even-row-color: $secondary-color
+$dt-focus-color: $highlight-color
+$dt-input-background-color: $secondary-color
+$dt-input-color: $primary-color
+
+
+.material-icons
+    font-size: 20px
+
+.datatable-container
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    background-color: whitesmoke
+    border-radius: $dt-border-radius
+    color: black
+    width: 95.8%
+    margin-left: 80px
+    font-size: 17px
+    height: 100vh
+
+
+.datatable-container .header-tools
+    border-bottom: solid 1px $dt-border-color
+    padding: 15px
+    display: flex
+    align-items: baseline
+    height: 70px
+    width: 100%
+
+.datatable-container .header-tools .search
+    width: 20%
+    display: flex
+    justify-content: center
+    text-align: center
+    align-items: center
+
+
+.datatable-container .header-tools .search form
+    display: flex
+    width: 100%
+
+.datatable-container .header-tools .search .input-search
+    margin: 0
+    padding-top: 5px
+    display: flex
+    width: 100%
+    
+.datatable-container .header-tools .search ion-icon
+    font-size: 20px
+    padding-inline: 10px
+
+.datatable-container .header-tools .search .search-input
+    width: 100%
+    background-color: white
+    display: block
+    box-sizing: border-box
+    border-radius: $dt-border-radius
+    border: solid 1px $dt-border-color
+    color: black
+    height: 20px
+
+
+.f
+
+.datatable-container .header-tools .tools
+    width: 80%
+
+.datatable-container .header-tools .tools ul
+    margin: 0
+    padding: 0
+    display: flex
+    justify-content: start
+    align-items: baseline
+
+
+.datatable-container .header-tools .tools ul li
+    display: inline-block
+    margin: 0 $dt-padding
+    align-items: baseline
+
+
+.datatable-container .header-tools .tools ul li button ion-icon
+    font-size: 20px
+    color: black
+    padding-top: 5px
+
+.datatable-container .header-tools .tools ul li span 
+    margin: 0
+    padding: 0
+    
+
+.datatable-container .header-tools .tools ul li span input
+   transform: scale(2)
+
+.datatable-container .footer-tools
+    width: 95.8%
+    position: fixed
+    padding: $dt-padding
+    display: flex
+    align-items: baseline
+    border:  1px solid $dt-border-color
+
+.datatable-container .footer-tools .list-items 
+    width: 50%
+
+.datatable-container .footer-tools .pages
+    margin-left: auto
+    margin-right: 0
+    width: 50%
+
+.datatable-container .footer-tools .pages ul
+    margin: 0
+    padding: 0
+    display: flex
+    align-items: baseline
+    justify-content: flex-end
+
+.datatable-container .footer-tools .pages ul li 
+    display: inline-block
+    margin: 0 $dt-padding-xs
+
+.datatable-container .header-tools .tools ul li span input
+    
+
+.datatable-container .footer-tools .pages ul li button, .datatable-container .header-tools .tools ul li button
+    color: $dt-text-color-button
+    width: 100%
+    box-sizing: border-box
+    border: 0
+    border-radius: $dt-border-radius
+    background: transparent
+    cursor: pointer
+
+.datatable-container .header-tools .tools ul li button:hover, .datatable-container .footer-tools .pages ul li button:hover
+    color: $dt-text-color-active-button
+    background: $dt-bg-active-button
+
+.datatable-container .footer-tools .pages ul li span.active
+    background-color: $dt-bg-color
+    border-radius: $dt-border-radius
+
+.datatable-container .footer-tools .pages ul li span, .datatable-container .header-tools .tools ul li button, .datatable-container .footer-tools .pages ul li button 
+    padding: $dt-padding-s $dt-padding 
+
+.datatable-container .datatable
+    border-collapse: collapse
+    width: 100%
+    text-align: center
+
+.datatable-container .datatable thead
+    background: #446dfa
+
+.datatable-container .datatable tbody
+    background: #eef4fb
+    
+.datatable-container .datatable, .datatable-container .datatable th, .datatable-container .datatable td 
+    padding: $dt-padding $dt-padding
+
+.datatable-container .datatable th 
+    font-weight: bolder
+    text-align: left
+    border-bottom: solid 1px $dt-border-color
+    text-align: center
+
+.datatable-container .datatable td 
+    border-bottom: solid 1px $dt-border-color
+
+.datatable-container .datatable td button
+    color: black
+    width: 100%
+    cursor: pointer
+    padding: 5px
+
+.datatable-container .datatable tbody tr:nth-child(even)
+    
+
+.datatable-container .datatable tbody tr:hover 
+    background-color: $dt-hover-cell-color
+    
+
+/*popup1*/
+.overlay
+    background: rgba(0, 0, 0,.3 )
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    visibility: hidden
+
+.overlay.active
+    visibility: visible
+    
+.popup
+    background: #f8f8f8
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3)
+    border-radius: 3px
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    padding: 20px
+    text-align: center
+    width: 600px
+    transition: .3s easy all
+    transform: scale(0.7)
+    opacity: 0
+
+.popup
+    .btn-cerrar-popup
+        font-size: 16px
+        line-height: 16px
+        display: block
+        text-align: right
+        color: #BBBBBB
+        transition: .3s ease all
+
+.popup .btn-cerrar-popup:hover
+    color: #000
+
+.popup h3 
+    font-size: 36px
+    font-weight: 600
+    margin-bottom: 10px
+
+.popup form .contenedor-inputs
+
+.popup form .contenedor-inputs input
+    width: 70%
+    margin-bottom: 20px
+    height: 30px
+    line-height: 30px
+    font-size: 18px
+    text-align: center
+    border: 1px solid #BBBBBB
+
+.popup form .btn-submit
+    padding: 0 20px
+    height: 40px
+    line-height: 40px
+    border: none
+    color: #fff
+    background: #5e7de3
+    border-radius: 3px
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    font-size: 16px
+    cursor: pointer
+    transition: .3 ease all
+
+.popup form .btn-submit:hover
+    background: rgba(94, 125, 227, .9)
+
+.popup.active
+    opacity: 1
+    transform: scale(1)
+
+
+/*popup2*/
+.overlay2
+    background: rgba(0, 0, 0,.3 )
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    visibility: hidden
+
+.overlay2.active
+    visibility: visible
+    
+.popup2
+    background: #f8f8f8
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3)
+    border-radius: 3px
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    padding: 20px
+    text-align: center
+    width: 600px
+    transition: .3s easy all
+    transform: scale(0.7)
+    opacity: 0
+
+.popup2 
+    .btn-cerrar-popup2
+        font-size: 16px
+        line-height: 16px
+        display: block
+        text-align: right
+        color: #BBBBBB
+        transition: .3s ease all
+
+.popup2 .btn-cerrar-popup2:hover
+    color: #000
+
+.popup2 h3 
+    font-size: 36px
+    font-weight: 600
+    margin-bottom: 10px
+
+.popup2 form .contenedor-inputs2
+
+.popup2 form .contenedor-inputs2 input
+    width: 70%
+    margin-bottom: 20px
+    height: 30px
+    line-height: 30px
+    font-size: 18px
+    text-align: center
+    border: 1px solid #BBBBBB
+
+.popup2 form .btn-submit2
+    padding: 0 20px
+    height: 40px
+    line-height: 40px
+    border: none
+    color: #fff
+    background: #5e7de3
+    border-radius: 3px
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    font-size: 16px
+    cursor: pointer
+    transition: .3 ease all
+
+.popup2 form .btn-submit2:hover
+    background: rgba(94, 125, 227, .9)
+
+.popup2.active
+    opacity: 1
+    transform: scale(1)
+
+.filter
+    display: none 

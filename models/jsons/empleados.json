@@ -1,0 +1,80 @@
+[  
+    {
+        "name": "Pablo Sandoval Garcia",
+        "email": "sandovalsinpecho@gmail.com",
+        "Phone": "662106936",
+        "country": "España",
+        "Direction": "Jeronimo de monsoriu",
+        "DateOfBirth": "07/05/2002",
+        "SocialSecurityNumber": "1234567890123456",
+        "job": "Diseño Web",
+        "department": "Informatica",
+        "Salary": "1500",
+        "entryDate": "06/08/2021"
+    },
+    {
+        "name": "Jaume Cortes payaso",
+        "email": "jaume@gmail.com",
+        "Phone": "662145936",
+        "country": "España",
+        "Direction": "avenida del puerto",
+        "DateOfBirth": "24/08/2002",
+        "SocialSecurityNumber": "4325667890123456",
+        "job": "Diseño backend ",
+        "department": "Informatica",
+        "Salary": "1200",
+        "entryDate": "08/12/2020"
+    },
+    {
+        "name": "Daniel Terren Cerdo",
+        "email": "dani@gmail.com",
+        "Phone": "322106936",
+        "country": "España",
+        "Direction": "avenida del cid",
+        "DateOfBirth": "14/11/2002",
+        "SocialSecurityNumber": "2658567890123456",
+        "job": "Editor",
+        "department": "Informatica",
+        "Salary": "1600",
+        "entryDate": "21/05/2022"
+    },
+    {
+        "name": "Juan Garcia Perez",
+        "email": "juan@gmail.com",
+        "Phone": "543106936",
+        "country": "Polonia",
+        "Direction": "Calle de los arbustos",
+        "DateOfBirth": "17/07/1989",
+        "SocialSecurityNumber": "0678967890123456",
+        "job": "Diseñador graficos ",
+        "department": "Informatica",
+        "Salary": "1500",
+        "entryDate": "06/08/2021"
+    },
+    {
+        "name": "Carlos Sanchez Garcia",
+        "email": "Carlos@gmail.com",
+        "Phone": "662342636",
+        "country": "EU",
+        "Direction": "Calle de los anzuelos",
+        "DateOfBirth": "25/09/2002",
+        "SocialSecurityNumber": "234657890123456",
+        "job": "CEO",
+        "department": "Marketing",
+        "Salary": "1700",
+        "entryDate": "08/08/2021"
+    },
+    {
+        "name": "Juan Lopez Martinez",
+        "email": "JuanCarlos@gmail.com",
+        "Phone": "43256936",
+        "country": "Portugal",
+        "Direction": "Avenida dos Aliados",
+        "DateOfBirth": "30/01/2012",
+        "SocialSecurityNumber": "4325667890123456",
+        "job": "Guarda",
+        "department": "Seguridad",
+        "Salary": "1900",
+        "entryDate": "23/02/2000"
+    }
+]

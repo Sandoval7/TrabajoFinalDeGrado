@@ -1,0 +1,76 @@
+[
+    {
+        "NumberTicket": "12345678F",
+        "Product": "Puerros",
+        "Price": "1000",
+        "PaymentType": "Paypal",
+        "Customertype": "Offline",
+        "NewBuyer": "Yes",
+        "Status": "Delivered"
+    },
+    {
+        "NumberTicket": "12345678F",
+        "Product": "Pan",
+        "Price": "5000",
+        "PaymentType": "Credit card",
+        "Customertype": "Online",
+        "NewBuyer": "No",
+        "Status": "Pending"
+    },
+    {
+        "NumberTicket": "12345678F",
+        "Product": "Queso",
+        "Price": "10000",
+        "PaymentType": "Cash",
+        "Customertype": "Offline",
+        "NewBuyer": "No",
+        "Status": "Pending"
+    },
+    {
+        "NumberTicket": "12345678F",
+        "Product": "Arroz",
+        "Price": "20000",
+        "PaymentType": "Paypal",
+        "Customertype": "Offline",
+        "NewBuyer": "Yes",
+        "Status": "Declined"
+    },
+    {
+        "NumberTicket": "12345678F",
+        "Product": "Arroz",
+        "Price": "20000",
+        "PaymentType": "Paypal",
+        "Customertype": "Online",
+        "NewBuyer": "Yes",
+        "Status": "Declined"
+    },
+    {
+        "NumberTicket": "12345678F",
+        "Product": "Arroz",
+        "Price": "20000",
+        "PaymentType": "Paypal",
+        "Customertype": "Online",
+        "NewBuyer": "Yes",
+        "Status": "Declined"
+    },
+    {
+        "NumberTicket": "12345678F",
+        "Product": "Arroz",
+        "Price": "20000",
+        "PaymentType": "Paypal",
+        "Customertype": "Online",
+        "NewBuyer": "Yes",
+        "Status": "Declined"
+    },
+    {
+        "NumberTicket": "12345678F",
+        "Product": "Arroz",
+        "Price": "20000",
+        "PaymentType": "Paypal",
+        "Customertype": "Online",
+        "NewBuyer": "Yes",
+        "Status": "Declined"
+    }
+    
+    
+]

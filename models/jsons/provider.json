@@ -1,0 +1,38 @@
+[
+    {
+        "Nif": "12345678F",
+        "Direction": "avenida del puerto",
+        "email": "empresa1@gmail.com",
+        "name": "Mercadona",
+        "product": "Arroz",
+        "amount": "10",
+        "price": "10"
+    },
+    {
+        "Nif": "12345678F",
+        "Direction": "avenida del puerto",
+        "email": "empresa1@gmail.com",
+        "name": "Mercadona",
+        "product": "Arroz",
+        "amount": "10",
+        "price": "10"
+    },
+    {
+        "Nif": "12345678F",
+        "Direction": "avenida del puerto",
+        "email": "empresa1@gmail.com",
+        "name": "Mercadona",
+        "product": "Arroz",
+        "amount": "10",
+        "price": "10"
+    },
+    {
+        "Nif": "12345678F",
+        "Direction": "avenida del puerto",
+        "email": "empresa1@gmail.com",
+        "name": "Mercadona",
+        "product": "Arroz",
+        "amount": "10",
+        "price": "10"
+    }
+]

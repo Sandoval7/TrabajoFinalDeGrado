@@ -1,0 +1,258 @@
+<header>
+    <div class="inicio visibility">
+        <a href="/"><img src="/img/logo_transparent.png" alt=""></a>
+        <a href="/" class="letra">GESTATOP</a>
+    </div>
+    <div class="desplegable">
+        <nav class="left">
+            <ul>
+                <li><a href="/Managment">Management</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="right">
+        <ul>
+            <div class="btncheck">
+                <li>
+                    <a href="/Sing-in">
+                        <button type="submit" >
+                            <span class="shadow"></span>
+                            <span class="edge"></span>
+                            <span class="front text"> Login
+                            </span>
+                        </button>
+                    </a>
+                </li>
+            </div>
+        </ul>
+    </div>
+</header>
+<style>
+body{
+
+}
+header {
+    display: flex;
+    background-image: url("/img/navbar.jpg");
+    height: 100px;
+}
+
+.inicio {
+    display: flex;
+    width: 15%;
+    padding-left: 1%;
+    padding-top: 0.4%;
+}
+.inicio img {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    padding-top: 15px;
+  
+}
+.inicio a {
+    font-size: 40px;
+    text-decoration: none;
+    color: white;
+    padding-top: 0.5%;
+}
+.letra {
+    padding-left: 3%;
+    position: absolute;
+    top:2% 
+      
+}
+.desplegable{
+    margin: 0;
+    padding: 0;
+}
+.desplegable i, .desplegable input{
+    display: none;
+}
+.left {
+    width: 40%;
+    padding-top: 5px;
+    padding: 5px;  
+}
+.left ul {
+    display: flex;
+    padding-left: 25%;
+    padding-top: 12%;
+}
+.left ul li {
+    margin: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 25px;
+    list-style: none;
+}
+.left ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.right {
+    width: 85%;
+    display: flex;
+    text-align: right;
+    justify-content: right;
+    padding-right: 30px;
+    padding-top: 5px;
+    
+}
+.right ul {
+    display: flex;
+}
+.right ul li {
+    margin: 10px;
+    font-size: 25px;
+    list-style: none;
+    
+}
+.right ul li a {
+    text-decoration: none;
+    
+}
+.log{
+    position: absolute;
+    top:35px;
+    left:1480px;
+    color:black
+}
+.btncheck{
+    margin: 0;
+    width: 170px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    right: -20px;
+}
+.check{
+    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid palevioletred;
+    border-radius: 20px;
+    background-color: palevioletred;
+    color: white;
+    
+    transition: 1s ease-out;
+    
+}
+.check:hover{
+    transition: 1s;
+    padding: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+button {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  touch-action: manipulation;
+  margin-top: 0px;
+  margin-bottom: 0px;
+ }
+ 
+ .shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition: transform
+     600ms
+     cubic-bezier(.3, .7, .4, 1);
+ }
+ 
+ .edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(
+     to left,
+     hsl(340deg 100% 16%) 0%,
+     hsl(340deg 100% 32%) 8%,
+     hsl(340deg 100% 32%) 92%,
+     hsl(340deg 100% 16%) 100%
+   );
+ }
+ 
+ .front {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: white;
+  background: hsl(345deg 100% 47%);
+  will-change: transform;
+  transform: translateY(-4px);
+  transition: transform
+     600ms
+     cubic-bezier(.3, .7, .4, 1);
+ }
+ 
+ button:hover {
+  filter: brightness(110%);
+ }
+ 
+ button:hover .front {
+  transform: translateY(-6px);
+  transition: transform
+     250ms
+     cubic-bezier(.3, .7, .4, 1.5);
+ }
+ 
+ button:active .front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+ }
+ 
+ button:hover .shadow {
+  transform: translateY(4px);
+  transition: transform
+     250ms
+     cubic-bezier(.3, .7, .4, 1.5);
+ }
+ 
+ button:active .shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+ }
+ 
+ button:focus:not(:focus-visible) {
+  outline: none;
+ }
+
+@media screen and (max-width: 500px){
+
+    header{
+        height: 100px;
+    }
+    
+    .inicio{
+        margin-bottom: 50px;
+    }
+
+    .visibility{
+        visibility: hidden;
+        position: absolute;
+    }
+
+}
+
+</style>

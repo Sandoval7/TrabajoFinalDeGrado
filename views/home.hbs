@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/home/home.css">
+    <title>Document</title>
+</head>
+<body>
+    <!--Navbar -->
+        {{> navbar}}
+    <section>
+        <div class="content">
+            <div class="texto">
+                <h1>GestaTop App</h1>
+                <p>The best application to manage your company quickly and easily!</p>
+                <a href="/Register">
+                    <button type="submit" >
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <span class="front text"> try out
+                        </span>
+                    </button>
+                </a>
+            </div>
+            <div class="cont-img">
+                <img src="/img/imagenHome.jpg" alt="">
+            </div>
+        </div>
+        <div class="content2">
+            <h1>All the advantages that GestaTop offers you</h1>
+            <div class="cards">
+                <div class="card">
+                    <h1>Earnings Manager</h1>
+                    <div class="icon"><ion-icon name="trending-up-outline"></ion-icon></div>
+                </div>
+                <div class="card">
+                    <h1>Employee Manager</h1>
+                    <div class="icon"><ion-icon name="people-circle-outline"></ion-icon></div>
+                </div>
+                <div class="card">
+                    <h1>Expense Manager</h1>
+                    <div class="icon"><ion-icon name="trending-down-outline"></ion-icon></div>
+                </div>
+                <div class="card">
+                    <h1>Sales Manager</h1>
+                    <div class="icon"><ion-icon name="bag-add-outline"></ion-icon></div>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <h1>Buyer Analysis</h1>
+                    <div class="icon"><ion-icon name="bag-check-outline"></ion-icon></div>
+                </div>
+                <div class="card">
+                    <h1>New buyers</h1>
+                    <div class="icon"><ion-icon name="bag-add-outline"></ion-icon></div>
+                </div>
+                <div class="card">
+                    <h1> Online Shoppers</h1>
+                    <div class="icon"><ion-icon name="bag-handle-outline"></ion-icon></div>
+                </div>
+                <div class="card">
+                    <h1>Offline shoppers</h1>
+                    <div class="icon"><ion-icon name="cart-outline"></ion-icon></ion-icon></div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+        {{> footer}}
+</body>
+</html>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

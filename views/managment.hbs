@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/Managment/managment.css">
+    <title>Document</title>
+</head>
+<body>
+    {{> verticalNavbar}}
+        <main>
+            <div class="top2">
+                <div class="out">
+                    <button>
+                        <a href="/Log-out"><span class="icon"><ion-icon name="power-outline"></ion-icon></span></a>
+                    </button>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b>{{user.nombre}}</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="/img/profile-1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <h1>Dashboard</h1>
+            <div class="insights">
+                <div class="sales">
+                    <ion-icon name="analytics-outline"></ion-icon>
+                    <div class="middle">
+                        <div class="lef">
+                            <h3>Total sales</h3>
+                            <h1>${{sumProduct}}</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx='38' cy='38' r='36'></circle>
+                            </svg>
+                            <div class="number">
+                                <p>81%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Ultimas 24h</small>
+                </div>
+
+                <div class="expenses">
+                    <ion-icon name="trending-down-outline"></ion-icon>
+                    <div class="middle">
+                        <div class="lef">
+                            <h3>total expenses</h3>
+                            <h1>${{sumExpenses}}</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx='38' cy='38' r='36'></circle>
+                            </svg>
+                            <div class="number">
+                                <p>62%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Ultimas 24h</small>
+                </div>
+
+                <div class="income">
+                    <ion-icon name="trending-up-outline"></ion-icon>
+                    <div class="middle">
+                        <div class="lef">
+                            <h3>Total Benefits</h3>
+                            <h1>${{TotalBenefits}}</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx='38' cy='38' r='36'></circle>
+                            </svg>
+                            <div class="number">
+                                <p>44%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Ultimas 24h</small>
+                </div> 
+            </div>
+            <div class="recent-orders">
+                <h2>Recent Orders</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Nº product</th>
+                            <th>Payment type</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each ListLimitSales}}
+                        <tr>
+                            <td>{{this.Product}}</td>
+                            <td>{{NumberTicket}}</td>
+                            <td>{{PaymentType}}</td>
+                            <td>{{Status}}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+                <a href="/Ventas" class="visibility">Ver Todas</a>
+            </div>
+        </main>
+    <div class="right">
+        <div class="top">
+            <div class="profile">
+                <div class="info">
+                    <p>Hey, <b>{{user.nombre}}</b></p>
+                    <small class="text-muted">Admin</small>
+                </div>
+                <div class="profile-photo">
+                    <img src="/img/profile-1.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="recent-updates">
+            <h2>Recent Updates</h2>
+            <div class="updates">
+                <div class="update">
+                    <div class="profile-photo">
+                        <img src="/img/profile-2.jpg" alt="">
+                    </div>
+                    <div class="message">
+                        <p><b>Mike Tyson</b> received his order of Night lion teach GPS drone.</p>
+                        <small class="text-muted">2 Minutes Ago</small>
+                    </div>
+                </div>
+                <div class="update">
+                    <div class="profile-photo">
+                        <img src="/img/profile-3.jpg" alt="">
+                    </div>
+                    <div class="message">
+                        <p><b>Mike Tyson</b> received his order of Night lion teach GPS drone.</p>
+                        <small class="text-muted">2 Minutes Ago</small>
+                    </div>
+                </div>
+                <div class="update">
+                    <div class="profile-photo">
+                        <img src="/img/profile-4.jpg" alt="">
+                    </div>
+                    <div class="message">
+                        <p><b>Mike Tyson</b> received his order of Night lion teach GPS drone.</p>
+                        <small class="text-muted">2 Minutes Ago</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sales-analytics">
+            <h2>Sales Analytics</h2>
+            <div class="item online">
+                <div class="icon">
+                    <ion-icon name="bag-handle-outline"></ion-icon>
+                </div>
+                <div class="right">
+                    <div class="info">
+                        <h3>ONLINE ORDERS</h3>
+                        <small class="text-muted">Last 24 Hours</small>
+                    </div>
+                    <h3>{{Online}}</h3>
+                </div>
+            </div>
+            <div class="item offline">
+                <div class="icon">
+                    <ion-icon name="cart-outline"></ion-icon>
+                </div>
+                <div class="right">
+                    <div class="info">
+                        <h3>OFFLINE ORDERS</h3>
+                        <small class="text-muted">Last 24 Hours</small>
+                    </div>
+                    <h3>{{Offline}}</h3>
+                </div>
+            </div>
+            <div class="item customers">
+                <div class="icon">
+                    <ion-icon name="bag-add-outline"></ion-icon>
+                </div>
+                <div class="right">
+                    <div class="info">
+                        <h3>NEW BUYERS</h3>
+                        <small class="text-muted">Last 24 Hours</small>
+                    </div>
+                    <h3>{{New}}</h3>
+                </div>
+            </div>
+            <div class="item customers">
+                <div class="icon">
+                    <ion-icon name="bag-check-outline"></ion-icon>
+                </div>
+                <div class="right">
+                    <div class="info">
+                        <h3>BUYERS</h3>
+                        <small class="text-muted">Last 24 Hours</small>
+                    </div>
+                    <h3>{{nSales}}</h3>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+
+
+</body>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

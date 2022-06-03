@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/proveedoras/proveedorsas.css">
+    <title>Document</title>
+</head>
+<body>
+     {{> verticalNavbar}}
+     <div class="datatable-container">
+         <div class="header-tools">
+             <div class="tools">
+                 <ul>
+                     <li>
+                         <button class="btn-abrir-popup" id="btn-abrir-popup">
+                             <ion-icon name="add-circle-outline"></ion-icon>
+                         </button>
+                     </li>
+                     
+                     <li>
+                         <button>
+                             <ion-icon name="share-social-outline"></ion-icon>
+                         </button>
+                     </li>
+                 </ul>
+             </div>
+             <div class="search">
+                <div class="input-search">
+                    <ion-icon name="search-outline"></ion-icon>
+                    <input type="text" name="" id="search" class="search-input">
+                </div>
+             </div>
+         </div>
+         <table class="datatable">
+             <thead>
+                 <tr>
+                    <th>Cif</th>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Direccion</th>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                    <th></th>
+                    <th></th>
+                 </tr>
+             </thead>
+             <tbody>
+                {{#each proveedores}}
+                <tr class="article">
+                    <td>{{Cif}}</td>
+                    <td>{{name}}</td>
+                    <td>{{email}}</td>
+                    <td>{{Direction}}</td>
+                    <td>{{product}}</td>
+                    <td>{{amount}}</td>
+                    <td>{{price}}</td>
+                    <td>
+                        <a href="/EditarProveedor/{{_id}}">
+                            <button>
+                                <ion-icon name="pencil-outline"></ion-icon>
+                            </button> 
+                        </a>
+                     </td>
+                     <td>
+                         <form action="/EliminarProveedor/{{_id}}?_method=DELETE" method="POST">
+                            <input type="hidden" name="_method" id="DELETE">
+                            <button>
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </button>
+                         </form>
+                     </td>
+                </tr>
+                {{/each}}
+             </tbody>
+
+         </table>
+
+        <div class="overlay" id="overlay">
+            <div class="popup" id="popup">
+                <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><ion-icon name="close-outline"></ion-icon></a>
+                <h3>Añadir un nueva Proveedora</h3>
+                <form action="/AnadirProveedor" method="POST">
+                    <div class="contenedor-inputs">
+                        <input type="text" name="Cif" id="" placeholder="Cif" />
+                        <input type="text" name="name" id="" placeholder="Nombre" />
+                        <input type="text" name="email" id="" placeholder="Email" />
+                        <input type="text" name="Direction" id="" placeholder="Direccion" />
+                        <input type="text" name="product" id="" placeholder="Producto" />
+                        <input type="text" name="amount" id="" placeholder="Cantidad" />
+                        <input type="text" name="price" id="" placeholder="Precio" />
+                    </div>
+                    <div>
+                        <input type="submit" name="" id="" value="Crear" class="btn-submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="overlay2" id="overlay2">
+            <div class="popup2" id="popup2">
+                <a href="#" id="btn-cerrar-popup2" class="btn-cerrar-popup2"><ion-icon name="close-outline"></ion-icon></a>
+                <h3>Editar un Empleado</h3>
+                <form action="" method="POST">
+                    <div class="contenedor-inputs2">
+                        <input type="text" name="name" id="" placeholder="Nombre y Apellidos" value="{{EditarEmpleado.name}}" />
+                        <input type="text" name="email" id="" placeholder="Email"  value="{{EditarEmpleado.email}}"/>
+                        <input type="text" name="Phone" id="" placeholder="Telefono"  value="{{EditarEmpleado.Phone}}"/>
+                        <input type="text" name="country" id="" placeholder="Pais"  value="{{EditarEmpleado.country}}"/>
+                        <input type="text" name="Direction" id="" placeholder="Dirrecion"  value="{{EditarEmpleado.Direction}}"/>
+                        <input type="text" name="DateOfBirth" id="" placeholder="fecha de nacimiento"  value="{{EditarEmpleado.DateOfBirth}}"/>
+                        <input type="text" name="SocialSecurityNumber" id="" placeholder="Nº segurida social"  value="{{EditarEmpleado.SocialSecurityNumber}}"/>
+                        <input type="text" name="job" id="" placeholder="Cargo"  value="{{EditarEmpleado.job}}"/>
+                        <input type="text" name="department" id="" placeholder="departamento"  value="{{EditarEmpleado.department}}"/>
+                        <input type="text" name="Salary" id="" placeholder="Salario"  value="{{EditarEmpleado.Salary}}"/>
+                        <input type="text" name="entryDate" id="" placeholder="Fecha de entrada"  value="{{EditarEmpleado.entryDate}}"/>
+                    </div>
+                    <div>
+                        <input type="submit" name="" id="" value="Editar" class="btn-submit2">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<!--
+         <div class="footer-tools">
+             <div class="list-items">
+                Show
+                <select name="n-entries" id="n-enties" class="n-entries">
+                    <option value="15">5</option>
+                    <option value="10" selected>10</option>
+                    <option value="15"></option>
+                </select>
+                entries
+             </div>
+             <div class="pages">
+                 <ul>
+                    <li><span class="active">1</span></li>
+                    <li><button>2</button></li>
+                    <li><button>3</button></li>
+                    <li><button>4</button></li>
+                    <li><button>...</button></li>
+                    <li><button>9</button></li>
+                    <li><button>10</button></li>
+                 </ul>
+             </div>
+         </div>
+-->
+</body>
+
+<script src="/javascripts/proveedoras.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
